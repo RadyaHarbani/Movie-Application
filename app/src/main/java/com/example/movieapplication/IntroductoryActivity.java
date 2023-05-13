@@ -21,9 +21,9 @@ public class IntroductoryActivity extends AppCompatActivity {
         backgroundSplashScreen = findViewById(R.id.background);
         logoAplikasi = findViewById(R.id.logo);
 
-        backgroundSplashScreen.animate().translationY(-2500).setDuration(800).setStartDelay(4700);
-        lottieAnimationView.animate().translationY(1400).setDuration(1000).setStartDelay(4700);
-        logoAplikasi.animate().translationY(1400).setDuration(1000).setStartDelay(4700);
+        backgroundSplashScreen.animate().translationY(-2500).setDuration(1000).setStartDelay(3000);
+        lottieAnimationView.animate().translationY(1400).setDuration(1000).setStartDelay(4100);
+        logoAplikasi.animate().translationY(1400).setDuration(1000).setStartDelay(3000);
 
 //        new Handler().postDelayed(new Runnable() {
 //            @Override
