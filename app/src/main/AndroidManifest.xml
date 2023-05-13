@@ -11,7 +11,7 @@
         android:theme="@style/Theme.MovieApplication"
         tools:targetApi="31">
         <activity
-            android:name=".IntroductoryActivity"
+            android:name=".OnBoardingScreenActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
