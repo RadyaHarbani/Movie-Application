@@ -4,27 +4,32 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".IntroductoryActivity">
+    tools:context=".OnBoardingScreenActivity">
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/view_pager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
 
     <ImageView
         android:id="@+id/background"
         android:layout_width="match_parent"
         android:layout_height="900dp"
         android:src="@drawable/bg_splash_screen"
-        app:layout_constraintVertical_bias="0"
+        app:layout_constraintVertical_bias="0.02"
         android:scaleType="centerCrop"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:tint="@color/material_dynamic_neutral95" />
+        app:tint="@color/blue" />
 
     <com.airbnb.lottie.LottieAnimationView
         android:id="@+id/lottie"
         app:lottie_autoPlay="true"
         android:layout_width="wrap_content"
         android:layout_height="300dp"
-        app:lottie_rawRes="@raw/splash_screen"
+        app:lottie_rawRes="@raw/splash"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -33,12 +38,13 @@
     <ImageView
         android:id="@+id/logo"
         android:layout_width="wrap_content"
-        android:layout_height="35dp"
+        android:layout_height="30dp"
+        android:layout_marginBottom="276dp"
         android:src="@drawable/logo_cineflix"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/lottie"
-        app:tint="@color/black" />
+        app:tint="@color/cream" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
