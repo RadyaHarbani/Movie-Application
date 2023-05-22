@@ -1,3 +1,23 @@
 <resources>
     <string name="app_name">MovieApplication</string>
+
+    <!--    Title On Boarding-->
+    <string name="first_slide_title">Bergabung Dengan Cineflix?</string>
+    <string name="second_slide_title">Tanpa Harus Kemana-mana</string>
+    <string name="third_slide_title">Login Dan Rasakan Sensasinya</string>
+
+    <!--    Description On Boarding-->
+    <string name="first_slide_desc">Pantau terus update film bioskop lewat Cinefix,Cepat,Akurat,Seru</string>
+    <string name="second_slide_desc">Lengkap dengan fitur-fitur yang menarik dan pastinya tak ketinggalan zaman</string>
+    <string name="third_slide_desc">Rasakan pengalaman menonton dan update film secara cepat di Cineflix</string>
+
+    <!--    Buttons-->
+    <string name="skip_btn">Skip</string>
+    <string name="next_btn">Next</string>
+    <string name="let_get_started">Login For Experience</string>
+
+
+    <string name="facebook_app_id">6361160747278742</string>
+    <string name="fb_login_protocol_scheme">fb6361160747278742</string>
+    <string name="facebook_client_token">56789</string>
 </resources>
