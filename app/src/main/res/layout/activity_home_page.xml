@@ -6,13 +6,54 @@
     android:layout_height="match_parent"
     tools:context=".HomePage">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="sndjasnhdjidhfd"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="199dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/logo_cineflix"
+        app:layout_constraintBottom_toTopOf="@+id/rvMovie"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:tint="@color/black" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvMovie"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_below="@id/logo"
+        app:layout_constraintTop_toBottomOf="@+id/logo"
+        tools:listitem="@layout/item_movie" />
+
+    <com.facebook.shimmer.ShimmerFrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/shimmer"
+        android:layout_marginTop="15dp"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@id/logo">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <include layout="@layout/shimmer_layout"/>
+            <include layout="@layout/shimmer_layout"/>
+            <include layout="@layout/shimmer_layout"/>
+            <include layout="@layout/shimmer_layout"/>
+            <include layout="@layout/shimmer_layout"/>
+            <include layout="@layout/shimmer_layout"/>
+            <include layout="@layout/shimmer_layout"/>
+            <include layout="@layout/shimmer_layout"/>
+            <include layout="@layout/shimmer_layout"/>
+            <include layout="@layout/shimmer_layout"/>
+            <include layout="@layout/shimmer_layout"/>
+
+        </LinearLayout>
+
+    </com.facebook.shimmer.ShimmerFrameLayout>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
