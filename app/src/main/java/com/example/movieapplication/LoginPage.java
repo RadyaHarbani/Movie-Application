@@ -14,30 +14,22 @@ import com.androidnetworking.AndroidNetworking;
 import com.androidnetworking.common.Priority;
 import com.androidnetworking.error.ANError;
 import com.androidnetworking.interfaces.JSONObjectRequestListener;
-import com.facebook.AccessToken;
-import com.facebook.CallbackManager;
-import com.facebook.FacebookCallback;
-import com.facebook.FacebookException;
-import com.facebook.login.LoginManager;
-import com.facebook.login.LoginResult;
 import com.google.android.gms.auth.api.signin.GoogleSignIn;
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
 import com.google.android.gms.auth.api.signin.GoogleSignInClient;
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions;
+import com.google.android.gms.common.SignInButton;
 import com.google.android.gms.common.api.ApiException;
+import com.google.android.gms.common.api.GoogleApiClient;
 import com.google.android.gms.tasks.Task;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import java.util.Arrays;
-
 public class LoginPage extends AppCompatActivity {
 
     ImageView googleBtn;
-    ImageView facebookBtn;
     private GoogleSignInOptions gso;
     private GoogleSignInClient gsc;
-    private CallbackManager callbackManager;
 
     public static final String SHARED_PREFS = "shared_prefs";
     public static final String EMAIL_KEY = "email_key";
@@ -48,7 +40,6 @@ public class LoginPage extends AppCompatActivity {
     EditText txtUsername;
     EditText txtPassword;
     Button btnLogin;
-//    ProgressBar mProgressBar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -65,7 +56,6 @@ public class LoginPage extends AppCompatActivity {
 
                 String username = txtUsername.getText().toString();
                 String password = txtPassword.getText().toString();
-//                mProgressBar.setVisibility(View.VISIBLE);
                 btnLogin.setEnabled(false);
 
 
@@ -128,41 +118,6 @@ public class LoginPage extends AppCompatActivity {
                 signIn();
             }
         });
-
-        callbackManager = CallbackManager.Factory.create();
-        AccessToken accessToken = AccessToken.getCurrentAccessToken();
-        boolean isLoggedIn = accessToken != null && !accessToken.isExpired();
-        if (isLoggedIn){
-            startActivity(new Intent(LoginPage.this, HomePage.class));
-            finish();
-        }
-
-        LoginManager.getInstance().registerCallback(callbackManager,
-                new FacebookCallback<LoginResult>() {
-                    @Override
-                    public void onSuccess(LoginResult loginResult) {
-                        startActivity(new Intent(LoginPage.this, HomePage.class));
-                        finish();
-                    }
-
-                    @Override
-                    public void onCancel() {
-                        // App code
-                    }
-
-                    @Override
-                    public void onError(FacebookException exception) {
-                        // App code
-                    }
-                });
-
-        facebookBtn = findViewById(R.id.facebookButton);
-        facebookBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                LoginManager.getInstance().logInWithReadPermissions(LoginPage.this, Arrays.asList("public_profile"));
-            }
-        });
     }
 
     void signIn() {
@@ -187,8 +142,6 @@ public class LoginPage extends AppCompatActivity {
                 Log.e("LoginActivity", "Google Sign in Failed", e);
                 Toast.makeText(getApplicationContext(), "Something went wrong", Toast.LENGTH_SHORT).show();
             }
-        } else {
-            callbackManager.onActivityResult(requestCode, resultCode, data);
         }
     }
 

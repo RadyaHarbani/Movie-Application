@@ -191,7 +191,7 @@
         android:id="@+id/btnlogin"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="212dp"
+        android:layout_marginTop="220dp"
         android:background="@drawable/background_button"
         android:text="Login"
         android:textSize="15dp"
@@ -202,26 +202,15 @@
 
     <ImageView
         android:id="@+id/googleButton"
-        android:layout_width="159dp"
-        android:layout_height="100dp"
+        android:layout_width="329dp"
+        android:layout_height="107dp"
         android:src="@drawable/google_button"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.145"
+        app:layout_constraintHorizontal_bias="0.453"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.743" />
+        app:layout_constraintVertical_bias="0.762" />
 
-    <ImageView
-        android:id="@+id/facebookButton"
-        android:layout_width="159dp"
-        android:layout_height="100dp"
-        android:src="@drawable/facebook_button"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.85"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.743" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -20,4 +20,8 @@
     <string name="facebook_app_id">6361160747278742</string>
     <string name="fb_login_protocol_scheme">fb6361160747278742</string>
     <string name="facebook_client_token">56789</string>
+    <string name="search">Search</string>
+
+    <string name="open">Open Navigation Drawer</string>
+    <string name="close">Close Navigation Drawer</string>
 </resources>
